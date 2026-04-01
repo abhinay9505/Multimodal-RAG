@@ -1,0 +1,40 @@
+/* Remove padding */
+.block-container {
+    padding-top: 2rem;
+}
+
+/* User message */
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+.user-bubble {
+    background: #007AFF;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 70%;
+}
+
+/* Bot message */
+.bot-message {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0;
+}
+.bot-bubble {
+    background: #f1f1f1;
+    padding: 10px 14px;
+    border-radius: 16px;
+    max-width: 70%;
+}
+
+/* Input fixed bottom */
+section[data-testid="stChatInput"] {
+    position: fixed;
+    bottom: 15px;
+    left: 25%;
+    right: 25%;
+    background: white;
+}

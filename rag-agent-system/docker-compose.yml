@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  rag-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rag-agent-system
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app:/app/app
+      - ./uploads:/app/app/uploads
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GROQ_MODEL=${GROQ_MODEL:-llama-3.3-70b-versatile}
+      - SERPER_API_KEY=${SERPER_API_KEY}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL:-sentence-transformers/all-MiniLM-L6-v2}
+      - HUGGINGFACE_MODEL=${HUGGINGFACE_MODEL:-all-MiniLM-L6-v2}
+      - EMBEDDING_DIMENSION=${EMBEDDING_DIMENSION:-384}
+      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0}
+      - DEBUG=${DEBUG:-false}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    restart: unless-stopped
+
+volumes:
+  uploads:
+    driver: local

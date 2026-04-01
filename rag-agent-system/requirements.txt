@@ -1,0 +1,44 @@
+# RAG Agent System Requirements
+
+# FastAPI & Web
+fastapi
+uvicorn
+python-multipart
+streamlit
+
+# Environment & Configuration
+python-dotenv
+
+# LangChain & LLM Framework
+langchain
+langchain-core
+langgraph
+langchain-huggingface
+langchain-community
+langchain-groq
+
+# PDF & Document Processing
+pdfplumber
+python-docx
+pypdf
+
+# ML & Embeddings
+huggingface-hub
+sentence-transformers
+faiss-cpu
+rank-bm25
+numpy
+
+# LLM
+groq
+
+# Web Search Integration
+duckduckgo-search
+google-search-results
+requests
+
+# Agent & Graph Processing
+typing-extensions
+
+# MCP (Model Context Protocol)
+mcp
