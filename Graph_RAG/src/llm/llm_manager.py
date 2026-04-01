@@ -7,7 +7,7 @@ import json
 import re
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_google_genai.embeddings import GoogleGenerativeAIEmbeddings
-from langchain.schema import HumanMessage
+from langchain_core.messages import HumanMessage
 from config.settings import settings
 
 
